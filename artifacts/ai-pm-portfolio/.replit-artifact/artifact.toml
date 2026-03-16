@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "AI PM Portfolio"
+version = "1.0.0"
+id = "artifacts/ai-pm-portfolio"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 24347
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/ai-pm-portfolio run dev"
+
+[services.env]
+PORT = "24347"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/ai-pm-portfolio", "run", "build"]
+publicDir = "artifacts/ai-pm-portfolio/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"

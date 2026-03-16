@@ -1,0 +1,8 @@
+packages:
+  "framer-motion": "Required for smooth scroll animations, fade-ins, and premium portfolio interactions."
+  "clsx": "Utility for constructing className strings conditionally."
+  "tailwind-merge": "Utility to safely merge Tailwind classes without style conflicts."
+
+notes:
+  - This is a 100% static frontend portfolio. No backend or API integration is required.
+  - Relying on CSS-based mockups and diagrams as requested, avoiding heavy image assets to maintain the ultra-minimalist aesthetic.
