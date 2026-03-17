@@ -58,8 +58,6 @@ export default function Home() {
             <div className="w-1 h-1 bg-gray-700 rounded-full"></div>
             <div className="flex items-center gap-2"><span className="text-primary font-bold">4</span> AI 项目</div>
             <div className="w-1 h-1 bg-gray-700 rounded-full"></div>
-            <div className="flex items-center gap-2"><span className="text-primary font-bold">1周</span> MVP</div>
-            <div className="w-1 h-1 bg-gray-700 rounded-full"></div>
             <div>GPT/Claude/文心</div>
           </div>
 

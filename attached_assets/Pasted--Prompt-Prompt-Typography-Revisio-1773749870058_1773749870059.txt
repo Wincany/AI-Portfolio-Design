@@ -1,0 +1,129 @@
+基于你的视觉参考和修改要求，以下是补充的详细Prompt：
+
+---
+
+## 补充Prompt：视觉规范与技能页设计
+
+### 一、字体层级系统修订 (Typography Revision)
+
+```
+字号规范（基于16:9页面，1920×1080参考）：
+- 页面大标题：思源黑体 Bold / Montserrat Bold，字号 48-56pt，字重 700，行高 1.2
+- 项目副标题：思源黑体 Medium / Inter Medium，字号 24-28pt，字重 500，透明度 90%，行高 1.4
+- 核心内容文案：思源黑体 Regular / Inter Regular，字号 18-20pt，行高 1.6
+- 标签/注释：思源黑体 Regular / Inter Regular，字号 14-16pt，透明度 70%，行高 1.5
+
+层级控制原则：
+- 最大字号与最小字号差距控制在 3-4 级以内（如 56pt → 20pt → 16pt）
+- 相邻层级字号差 ≤ 8pt，避免跳跃感
+- 统一使用 Regular 字重作为正文基准，避免过细字体（Light/Thin）
+```
+
+### 二、配色方案统一修订 (Color Palette - Light Mode)
+
+```
+全局浅色模式配色：
+- 背景色 (Background)：#F8F9FA 米白微灰，全页面统一
+- 卡片背景 (Card)：#FFFFFF 纯白，配 1px 浅灰描边 #E5E7EB，圆角 16px
+- 主色 (Primary)：#2563EB 科技蓝 —— 用于标题强调、关键数据、CTA按钮
+- 辅色 (Secondary)：#059669 翡翠绿 —— 用于正向数据、成功状态、增长指标
+- 强调色 (Accent)：#7C3AED 紫罗兰 —— 用于标签高亮、图标点缀、Hover状态
+- 文字色 (Text Primary)：#111827 深炭灰，90%透明度
+- 次要文字 (Text Secondary)：#6B7280 中灰，70%透明度
+
+配色应用规则：
+- 每页仅使用 Primary + Secondary + Accent 三色组合，禁止额外颜色
+- 数据卡片使用白底 + 左侧 4px 色条（蓝/绿/紫区分类型）
+- 图标统一使用单色线条风格，Hover时切换为 Accent 色
+- 所有阴影使用黑色 5% 透明度，Y轴偏移 4px，模糊 12px
+```
+
+### 三、标题规范 (Title Format)
+
+```
+标题书写规则：
+- 禁止使用任何标点符号（：、|、-、——、()、[] 等）
+- 使用空格分隔语义单元
+- 英文单词首字母大写，中文与英文间保留空格
+
+标题格式示例：
+原：Project 01 | Audio Parsing Workflow：让冗余信息无所遁形
+改：Project 01  Audio Parsing  信息降噪工作流
+
+原：AI 沉浸式面试模拟器 (Interview Simulator Agent)
+改：Project 02  Interview Simulator  AI面试模拟器
+
+原：LBS 城市情绪漫游指南 - [敏捷开发 Vibe Coding 项目]
+改：Project 04  City Vibe  情绪漫游指南
+```
+
+### 四、技能页设计规范 (Skills Page Design)
+
+参考提供的视觉风格，最后一页技能展示要求如下：
+
+```
+页面结构：
+顶部：小号大写字母标签 SKILLS  CONTACT  字间距 4px  颜色 Secondary #059669
+主标题：Let's Build AI Products  字号 72pt  字重 700
+        Let's Build 使用 Text Primary #111827
+        AI Products 使用 Primary #2563EB 渐变至 Accent #7C3AED
+
+内容布局：
+- 4列等宽卡片网格，间距 24px
+- 每列卡片统一规格：圆角 16px，白底，1px 描边 #E5E7EB，内边距 32px
+- 卡片顶部为小号大写字母分类标签，字间距 2px，颜色对应分类色
+
+分类与内容（严格按此结构）：
+
+卡片1  AI ML  标签色 Primary #2563EB
+- Prompt Engineering
+- RAG
+- Multi-Agent
+- NLP
+
+卡片2  产品  标签色 Accent #7C3AED
+- Axure
+- 用研
+- A/B Test
+- 数据看板
+
+卡片3  技术  标签色 Secondary #059669
+- Python
+- SQL
+- GIS
+- Tableau
+
+卡片4  设计  标签色 #DC2626 珊瑚红（唯一例外，用于视觉平衡）
+- Figma
+- PS
+- AI
+- CAD
+
+卡片内文字规范：
+- 分类标签：12pt，大写，字间距 2px
+- 技能项：18pt，Regular 字重，行高 2.0（宽松呼吸感）
+- 所有文字左对齐，保持统一缩进
+```
+
+### 五、全局组件规范 (Global Components)
+
+```
+按钮规范：
+- 主按钮：Primary 蓝底白字，圆角 8px，内边距 12px 24px，字号 16pt
+- 次按钮：白底 Primary 描边，圆角 8px，Hover 时填充 Primary 10% 透明度
+
+标签规范：
+- 技术标签：浅灰底 #F3F4F6，圆角 4px，字号 14pt，内边距 4px 8px
+- 数据高亮：Primary 或 Secondary 色底，白字，圆角 4px
+
+分隔线：
+- 使用 1px 浅灰线 #E5E7EB，或 2px Primary 色块作为章节分隔
+
+图标规范：
+- 统一使用 24px 线性图标，2px 描边，圆角端点
+- 与文字间距 8px，垂直居中对齐
+```
+
+---
+
+以上补充确保全作品集视觉统一、年轻化且专业，同时严格遵循你的字体层级、配色和标题规范要求。
