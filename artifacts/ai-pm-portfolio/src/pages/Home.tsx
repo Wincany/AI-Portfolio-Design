@@ -26,83 +26,98 @@ export default function Home() {
     <div className="bg-[#F8F9FA] min-h-screen">
 
       {/* HERO */}
-      <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 overflow-hidden">
-        <div className="max-w-[1400px] mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Text */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="z-10"
-            >
-              <div className="mb-8 flex gap-3 flex-wrap">
-                <Badge variant="outline" className="px-4 py-1.5 text-sm border-gray-300 bg-white text-gray-600">北京大学 硕士在读</Badge>
-                <Badge variant="outline" className="px-4 py-1.5 text-sm border-gray-300 bg-white text-gray-600">26届求职</Badge>
-                <Badge variant="outline" className="px-4 py-1.5 text-sm border-gray-300 bg-white text-gray-600">AI 产品经理</Badge>
-              </div>
+      <section className="relative min-h-screen flex items-center px-6 md:px-16 lg:px-28 overflow-hidden bg-white">
+        {/* Subtle background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 -z-10" />
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-tight mb-3 text-gray-900">
+        <div className="max-w-[1300px] mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-20 items-center">
+
+            {/* Left: Identity */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+            >
+              {/* Eyebrow */}
+              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-blue-600 mb-8">
+                AI Product Manager  ·  Class of 2026
+              </p>
+
+              {/* Name */}
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.92] text-gray-900 mb-8">
                 张雯倩
               </h1>
-              <p className="text-base text-gray-400 font-mono mb-8">18515101008  ·  2301212647@stu.pku.edu.cn</p>
 
-              <div className="flex flex-wrap gap-4 md:gap-6 items-center text-sm md:text-base font-mono text-gray-500 mb-10 bg-white border border-gray-200 p-4 rounded-2xl w-fit shadow-sm">
-                <div className="flex items-center gap-2"><span className="text-blue-600 font-bold">4</span> 段实习</div>
-                <div className="w-1 h-1 bg-gray-300 rounded-full" />
-                <div className="flex items-center gap-2"><span className="text-blue-600 font-bold">4</span> AI 项目</div>
-                <div className="w-1 h-1 bg-gray-300 rounded-full" />
-                <div className="text-gray-500">百度 腾讯 美团</div>
-              </div>
-
-              <p className="text-lg md:text-xl text-gray-500 tracking-wide max-w-xl leading-relaxed">
-                <strong className="font-semibold text-gray-900">地理学背景 × AI 产品思维</strong>
-                <br />
-                <span className="text-base mt-2 inline-block text-gray-400">空间数据分析  Prompt Engineering  Agent 工作流设计</span>
+              {/* One-liner */}
+              <p className="text-xl md:text-2xl text-gray-500 font-light leading-relaxed mb-12 max-w-lg">
+                地理学背景 × AI 产品思维<br />
+                <span className="text-base text-gray-400">空间数据  ·  Agent 设计  ·  Prompt Engineering</span>
               </p>
-            </motion.div>
 
-            {/* Right: Portrait */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-              className="flex justify-center lg:justify-end z-10"
-            >
-              <div className="relative">
-                <div className="absolute inset-0 -m-4 bg-gradient-to-br from-blue-100/60 to-violet-100/40 rounded-3xl blur-2xl -z-10" />
-                <div className="w-72 h-96 md:w-80 md:h-[440px] rounded-3xl overflow-hidden shadow-xl shadow-gray-200/60 border border-gray-100">
-                  <img
-                    src="/portrait.jpg"
-                    alt="张雯倩"
-                    className="w-full h-full object-cover object-top"
-                  />
+              {/* Experience strip */}
+              <div className="flex items-center gap-8 mb-12 text-sm text-gray-500">
+                <div>
+                  <span className="block text-2xl font-bold text-gray-900">百度</span>
+                  <span className="text-xs text-gray-400">产品经理</span>
                 </div>
-                <div className="absolute -bottom-4 -left-4 bg-white border border-gray-200 rounded-2xl px-4 py-3 shadow-md">
-                  <p className="text-xs text-gray-400 font-mono">北京大学</p>
-                  <p className="text-sm font-bold text-gray-800">地理学 硕士</p>
+                <div className="w-px h-8 bg-gray-200" />
+                <div>
+                  <span className="block text-2xl font-bold text-gray-900">腾讯</span>
+                  <span className="text-xs text-gray-400">研发项目管理</span>
                 </div>
-                <div className="absolute -top-4 -right-4 bg-blue-600 text-white rounded-2xl px-4 py-3 shadow-md">
-                  <p className="text-xs font-mono opacity-80">26届</p>
-                  <p className="text-sm font-bold">求职中</p>
+                <div className="w-px h-8 bg-gray-200" />
+                <div>
+                  <span className="block text-2xl font-bold text-gray-900">美团</span>
+                  <span className="text-xs text-gray-400">产品经理</span>
+                </div>
+                <div className="w-px h-8 bg-gray-200" />
+                <div>
+                  <span className="block text-2xl font-bold text-gray-900">北京大学</span>
+                  <span className="text-xs text-gray-400">地理学 硕士</span>
                 </div>
               </div>
+
+              {/* Contact */}
+              <div className="flex items-center gap-6 text-sm text-gray-400 font-mono border-t border-gray-100 pt-8">
+                <span>18515101008</span>
+                <span className="text-gray-200">|</span>
+                <span>2301212647@stu.pku.edu.cn</span>
+              </div>
             </motion.div>
+
+            {/* Right: Portrait — clean, no decoration */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+              className="flex justify-center lg:justify-end"
+            >
+              <div className="w-80 md:w-[380px] aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl shadow-gray-200/80">
+                <img
+                  src="/portrait.jpg"
+                  alt="张雯倩"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+            </motion.div>
+
           </div>
         </div>
 
+        {/* Scroll indicator */}
         <motion.div
           style={{ opacity, y }}
-          className="absolute bottom-12 left-6 md:left-12 lg:left-24 flex items-center gap-2 text-gray-400 font-mono z-10"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-300"
         >
-          <div className="w-1 h-10 bg-gray-200 rounded-full overflow-hidden relative">
+          <div className="w-[1px] h-12 bg-gray-200 overflow-hidden relative">
             <motion.div
-              animate={{ y: [0, 40, 0] }}
-              transition={{ repeat: Infinity, duration: 2, ease: 'linear' }}
-              className="absolute top-0 left-0 w-full h-1/3 bg-blue-500 rounded-full"
+              animate={{ y: [0, 48, 0] }}
+              transition={{ repeat: Infinity, duration: 1.8, ease: 'linear' }}
+              className="absolute top-0 left-0 w-full h-1/3 bg-blue-400"
             />
           </div>
-          <span className="rotate-180 text-[9px] tracking-widest uppercase" style={{ writingMode: 'vertical-rl' }}>SCROLL TO EXPLORE</span>
+          <span className="text-[9px] tracking-[0.2em] uppercase text-gray-300">scroll</span>
         </motion.div>
       </section>
 
@@ -132,40 +147,40 @@ export default function Home() {
               <div className="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
                 <div className="absolute left-0 top-0 w-1 h-full bg-blue-500" />
                 <div className="inline-block px-3 py-1 bg-blue-50 text-blue-600 border border-blue-100 rounded-full text-xs font-semibold mb-5 ml-2">百度地图</div>
-                <p className="text-gray-400 text-xs mb-1.5 ml-2">产品经理  2025.10–2026.02</p>
-                <h3 className="text-4xl font-black mb-4 font-mono tracking-tighter text-blue-600 ml-2">+14%</h3>
-                <p className="text-gray-800 font-semibold mb-1.5 ml-2 text-sm">NLP 语音识别优化</p>
-                <p className="text-xs text-gray-500 leading-relaxed ml-2">AI副驾陪伴能力升级，重构意图关键词库与多轮对话逻辑，推动NLP迭代，负反馈下降 27%。</p>
+                <p className="text-gray-400 text-xs mb-3 ml-2">产品经理  2025.10–2026.02</p>
+                <h3 className="text-xl font-bold mb-1 text-blue-600 ml-2 leading-snug">AI副驾</h3>
+                <h3 className="text-xl font-bold mb-4 text-gray-900 ml-2 leading-snug">NLP 体验优化</h3>
+                <p className="text-xs text-gray-500 leading-relaxed ml-2">分层播报策略 · A/B测试驱动迭代 · 语音识别准确率 <span className="font-semibold text-blue-600">↑14%</span>，负反馈 <span className="font-semibold text-blue-600">↓27%</span></p>
               </div>
 
               {/* 腾讯 */}
               <div className="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
                 <div className="absolute left-0 top-0 w-1 h-full bg-violet-500" />
                 <div className="inline-block px-3 py-1 bg-violet-50 text-violet-600 border border-violet-100 rounded-full text-xs font-semibold mb-5 ml-2">腾讯 IEG</div>
-                <p className="text-gray-400 text-xs mb-1.5 ml-2">研发项目管理  2025.06–2025.09</p>
-                <h3 className="text-4xl font-black mb-4 font-mono tracking-tighter text-violet-600 ml-2">85%+</h3>
-                <p className="text-gray-800 font-semibold mb-1.5 ml-2 text-sm">AI 陪玩业务孵化</p>
-                <p className="text-xs text-gray-500 leading-relaxed ml-2">主导AI陪玩核心功能原型设计，打通数据洞察–策略设计–体验验证闭环，用研接受度85%+。</p>
+                <p className="text-gray-400 text-xs mb-3 ml-2">研发项目管理  2025.06–2025.09</p>
+                <h3 className="text-xl font-bold mb-1 text-violet-600 ml-2 leading-snug">商业化平台</h3>
+                <h3 className="text-xl font-bold mb-4 text-gray-900 ml-2 leading-snug">数据体系搭建</h3>
+                <p className="text-xs text-gray-500 leading-relaxed ml-2">APM管线优化 · 商业数据看板 · 资产准点交付率 <span className="font-semibold text-violet-600">↑15%</span>，赋能定价策略</p>
               </div>
 
               {/* 美团 */}
               <div className="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
                 <div className="absolute left-0 top-0 w-1 h-full bg-emerald-500" />
                 <div className="inline-block px-3 py-1 bg-emerald-50 text-emerald-600 border border-emerald-100 rounded-full text-xs font-semibold mb-5 ml-2">美团</div>
-                <p className="text-gray-400 text-xs mb-1.5 ml-2">产品经理  2023.01–2023.04</p>
-                <h3 className="text-4xl font-black mb-4 font-mono tracking-tighter text-emerald-600 ml-2">+22%</h3>
-                <p className="text-gray-800 font-semibold mb-1.5 ml-2 text-sm">商户运营提效</p>
-                <p className="text-xs text-gray-500 leading-relaxed ml-2">构建商户分层运营模型，目标商户周均订单量 +22%，GMV月环比 +10%，头部续约率 92%。</p>
+                <p className="text-gray-400 text-xs mb-3 ml-2">产品经理  2023.01–2023.04</p>
+                <h3 className="text-xl font-bold mb-1 text-emerald-600 ml-2 leading-snug">搜推策略</h3>
+                <h3 className="text-xl font-bold mb-4 text-gray-900 ml-2 leading-snug">商户分层运营</h3>
+                <p className="text-xs text-gray-500 leading-relaxed ml-2">商户分层模型 · 促销策略设计 · 周均订单 <span className="font-semibold text-emerald-600">↑22%</span>，头部续约率 <span className="font-semibold text-emerald-600">92%</span></p>
               </div>
 
               {/* 蚁群 */}
               <div className="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
                 <div className="absolute left-0 top-0 w-1 h-full bg-orange-500" />
                 <div className="inline-block px-3 py-1 bg-orange-50 text-orange-600 border border-orange-100 rounded-full text-xs font-semibold mb-5 ml-2">蚁群科技</div>
-                <p className="text-gray-400 text-xs mb-1.5 ml-2">产品经理  2024.09–2025.03</p>
-                <h3 className="text-4xl font-black mb-4 font-mono tracking-tighter text-orange-600 ml-2">-40%</h3>
-                <p className="text-gray-800 font-semibold mb-1.5 ml-2 text-sm">多智能体调度</p>
-                <p className="text-xs text-gray-500 leading-relaxed ml-2">无人机调度平台全链路迭代，帮助光伏/电力客户实现运维成本降低 40%。</p>
+                <p className="text-gray-400 text-xs mb-3 ml-2">产品经理  2024.09–2025.03</p>
+                <h3 className="text-xl font-bold mb-1 text-orange-600 ml-2 leading-snug">多智能体调度</h3>
+                <h3 className="text-xl font-bold mb-4 text-gray-900 ml-2 leading-snug">无人机平台迭代</h3>
+                <p className="text-xs text-gray-500 leading-relaxed ml-2">光伏/电力场景落地 · 开放接口标准制定 · 运维成本 <span className="font-semibold text-orange-600">↓40%</span></p>
               </div>
             </div>
 
